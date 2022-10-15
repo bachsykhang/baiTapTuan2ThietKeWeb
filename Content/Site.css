@@ -1,0 +1,35 @@
+﻿.newstd {
+    margin-left: 17%;
+}
+
+.navbar-brand:focus {
+    color: white;
+}
+
+.containerEdit {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    width: 100%;
+    margin-left: 10%;
+}
+
+.setupUser {
+    padding: 0 0 9px 14px;
+}
+
+.form-horizontal {
+    margin-top:73px;
+}
+
+.form-group .form-control {
+    width: 40%;
+}
+
+.setmargin-User {
+    margin-left: 7%;
+}
+
+.text-Star {
+    margin-left: 4%;
+}

@@ -1,0 +1,56 @@
+﻿@model baiTapTuan2.Models.Pupil
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <div class="text-Star">
+            <h2>Pupil in the system</h2>
+            <p>You can add or edit the information of the pupil</p>
+            <hr />
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(x => x.Name, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(x => x.Age, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.IsNewlyAccount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(x => x.IsNewlyAccount, htmlAttributes: new { @class = "" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.TextBoxFor(x => x.Password, htmlAttributes: new
+                     {
+                    @class = "form-control",
+                    @type = "Password"
+                     })*@
+                @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.dateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(x => x.dateTime, htmlAttributes: new { @class = "form-control", @type = "date" })
+            </div>
+        </div>
+        <div class="newstd">
+            <button type="button" class="btn btn-success">Save</button>
+        </div>
+    </div>
+}

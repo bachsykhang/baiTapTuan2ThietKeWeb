@@ -1,0 +1,58 @@
+﻿@model baiTapTuan2.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="setmargin-User">
+    <div class="form-horizontal">
+        <h2>You can add or edit the information of the User</h2>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Account, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.Account, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Password, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.Password, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.UserName, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.UserName, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.age, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.age, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.IsNewlyAcccount, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.CheckBoxFor(x => x.IsNewlyAcccount, htmlAttributes: new { @class = "" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.IsActivated, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.CheckBoxFor(x => x.IsActivated, htmlAttributes: new { @class = "" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.IsDeleted, htmlAttributes: new { @class = "control-label setupUser" })
+            <div class="col-md-12">
+                @Html.CheckBoxFor(x => x.IsDeleted, htmlAttributes: new { @class = "" })
+            </div>
+        </div>
+    </div>
+</div>
+}
+
